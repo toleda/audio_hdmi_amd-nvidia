@@ -1,0 +1,40 @@
+# Maintained by: toleda for: github.com/toleda/audio_hdmi_9series
+# File: amd3-dsdt-ami-amd_fb_inj-hdmi_audio_v1.0
+# Credit: PikeRAlpha, RehabMan
+
+# Desktop specific AMD framebuffer injection HDMI audio dsdt edits
+# Note: HDxxxx-AMD-Nvidia dsdt edits must be present, 
+#       see Debug info at end of dsdt
+
+# Required information:
+# 1. device_id, 2. model, 3. framebuffer and 4. # of connectors
+# Edit info below for installed AMD graphics card
+
+# 1. Insert device PEGP frambuffer injection (AMD HDMI audio)
+# into_all all code_regex PEG0.PEGP replaceall_matched begin PEG0.GFX0 end;
+into method label _DSM parent_adr 0x00010000 remove_entry;
+into device label GFX0 parent_label PEG0 remove_entry;
+into device label PEG0 insert
+begin
+Device (GFX0)\n
+{\n
+    Name (_ADR, Zero)\n
+    Name (_SUN, One)\n
+    Method (_DSM, 4, NotSerialized)\n
+    {\n
+	    If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
+	    Return (Package()\n
+            {\n
+                "device-id", Buffer() {  0x3F, 0x68, 0x00, 0x00, },\n
+                "model", Buffer() { "AMD Radeon HD 7750" },\n
+                "@0,name", Buffer() { "ATY,Dashimaki" },\n
+                "@1,name", Buffer() { "ATY,Dashimaki" },\n
+                "@2,name", Buffer() { "ATY,Dashimaki" },\n
+                "hda-gfx", Buffer() { "onboard-2" },\n
+	    })\n
+    }\n
+}\n
+end;
+into definitionblock code_regex . insert
+begin Store ("amd3-dsdt-ami-amd_fb_inj-hdmi_audio_v1.0 dsdt edits, github.com/toleda", Debug) end
+

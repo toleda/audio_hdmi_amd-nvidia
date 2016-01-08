@@ -1,0 +1,4 @@
+AMD-fb_default-PEG0	DSDT	Patches/amd_framebuffers/amd1-dsdt-ami-amd_default-hdmi_audio-peg0.txt
+AMD-fb_injection-PEG0	DSDT	Patches/amd_framebuffers/amd2-dsdt-ami-amd_fb_inj-hdmi_audio-peg0.txt
+AMD-fb_default-PEGP	DSDT	Patches/amd_framebuffers/amd3-dsdt-ami-amd_default-hdmi_audio-pegp.txt
+AMD-fb_injection-PEGP	DSDT	Patches/amd_framebuffers/amd4-dsdt-ami-amd_fb_inj-hdmi_audio-pegp.txt

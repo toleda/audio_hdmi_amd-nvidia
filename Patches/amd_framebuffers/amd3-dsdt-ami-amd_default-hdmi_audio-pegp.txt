@@ -1,0 +1,32 @@
+# Maintained by: toleda for: github.com/toleda/audio_hdmi_9series
+# File: amd1-dsdt-ami-amd_default-hdmi_audio-pegp_v1.0
+# Credit: PikeRAlpha, RehabMan
+
+# Desktop AMD default framebuffer injection HDMI audio dsdt edits
+# Note: HDxxxx-AMD-Nvidia dsdt edits must be present, 
+#       Confirm with Debug info at end of dsdt
+
+# Verify dsdt/Device (IOReg/PEGP@1) exists. 
+
+# 1. Insert device GFX0 frambuffer injection (AMD HDMI audio/default framebuffer)
+into method label _DSM parent_adr 0x00010000 remove_entry;
+into device label GFX0 parent_label PEGP remove_entry;
+into device label PEGP insert
+begin
+Device (GFX0)\n
+{\n
+    Name (_ADR, Zero)\n
+    Name (_SUN, One)\n
+    Method (_DSM, 4, NotSerialized)\n
+    {\n
+	    If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
+	    Return (Package()\n
+            {\n
+                "hda-gfx", Buffer() { "onboard-2" },\n
+	    })\n
+    }\n
+}\n
+end;
+into definitionblock code_regex . insert
+begin Store ("amd1-dsdt-ami-amd_default-hdmi_audio-pegp_v1.0 dsdt edits, github.com/toleda", Debug) end
+
