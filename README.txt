@@ -1,4 +1,4 @@
-audio_hdmi_amd-nvidia
+audio_hdmi_discrete
 ============
 OS X AMD/Nvidia discrete graphics HDMI audio
 
@@ -20,6 +20,7 @@ Supports IOReg/P0P2 display device name
 Supports IOReg/PEG0 display device name
 
 B. AMD discrete graphics/default framebuffer (AMD HDMI Audio)
+0. ATY,AMD,RadeonFramebuffer
 1. ssdt_hdmi-amd_default-NPE3
 Supports IOReg/NPEs display device name
 
@@ -85,5 +86,5 @@ Problem Reporting
    2. http://www.tonymacx86.com/hdmi-audio/143760-audio-hdmi-audio-applehda-guide.html#post886766
 
 toleda
-https://github.com/toleda/audio_hdmi_amd-nvidia
+https://github.com/toleda/audio_hdmi_discrete
 README.txt
