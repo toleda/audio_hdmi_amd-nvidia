@@ -7,45 +7,81 @@ PEG0/P0P2/NPE3/P0P1, etc. ???
 
 SSDTs
 A. Nvidia discrete graphics (Nvidia HDMI Audio)
-1. ssdt_hdmi-nvidia-NPE3
-Supports IOReg/NPEs display device name
+1. ssdt_hdmi-nvidia-BR3A - TBA
+Supports IOReg/BR3A display device name
 
-2. ssdt_hdmi-nvidia-P0P1
+2. ssdt_hdmi-nvidia-NPE3
+Supports IOReg/NPE3 display device name
+
+3. ssdt_hdmi-nvidia-NPE7
+Supports IOReg/NPE7 display device name
+
+4. ssdt_hdmi-nvidia-P0P1
 Supports IOReg/P0P1 display device name
 
-3. ssdt_hdmi-nvidia-P0P2
+5. ssdt_hdmi-nvidia-P0P2
 Supports IOReg/P0P2 display device name
 
-4. ssdt_hdmi-nvidia-PEG0
+6. ssdt_hdmi-nvidia-PEG0
 Supports IOReg/PEG0 display device name
+
+7. ssdt_hdmi-nvidia-PEGP@1
+Supports IOReg/pci-bridge@1 display device name
+
+8. ssdt_hdmi-nvidia-PEGP@3
+Supports IOReg/pci-bridge@3 display device name
 
 B. AMD discrete graphics/default framebuffer (AMD HDMI Audio)
 0. ATY,AMD,RadeonFramebuffer
-1. ssdt_hdmi-amd_default-NPE3
-Supports IOReg/NPEs display device name
+1. ssdt_hdmi-amd-default-BR3A - TBA
+Supports IOReg/BR3A display device name
 
-2. ssdt_hdmi-amd_default-P0P1
+2. ssdt_hdmi-amd-default-NPE3
+Supports IOReg/NPE3 display device name
+
+3. ssdt_hdmi-amd-default-NPE7
+Supports IOReg/NPE7 display device name
+
+4. ssdt_hdmi-amd-default-P0P1
 Supports IOReg/P0P1 display device name
 
-3. ssdt_hdmi-amd_default-P0P2
+5. ssdt_hdm-amd-default-P0P2
 Supports IOReg/P0P2 display device name
 
-4. ssdt_hdmi-amd_default-PEG0
+6. ssdt_hdmi-amd-default-PEG0
 Supports IOReg/PEG0 display device name
+
+7. ssdt_hdmi-amd-default-PEGP@1
+Supports IOReg/pci-bridge@1 display device name
+
+8. ssdt_hdmi-amd-default-PEGP@3
+Supports IOReg/pci-bridge@3 display device name
 
 C. AMD discrete graphics/framebuffer injection (AMD HDMI Audio)
-Edits required: Model/eevice)id/framebuffer/number of connectors
-1. ssdt_hdmi-amd_fb_inj-NPE3
-Supports IOReg/NPEs display device name
+Edits required: Model/device-id/framebuffer/number of connectors
+1. ssdt_hdmi-amd-default-BR3A - TBA
+Supports IOReg/BR3A display device name
 
-2. ssdt_hdmi-amd_fb_inj-P0P1
+2. ssdt_hdmi-amd_fb_inj-NPE3
+Supports IOReg/NPE3 display device name
+
+3. ssdt_hdmi-amd_fb_inj-NPE7 (Edit ssdt/Find NPE3/Replace NPE7)
+Supports IOReg/NPE7 display device name
+
+4. ssdt_hdmi-amd_fb_inj-P0P1
 Supports IOReg/P0P1 display device name
 
-3. ssdt_hdmi-amd_fb_inj-P0P2
+5. ssdt_hdmi-amd_fb_inj-P0P2
 Supports IOReg/P0P2 display device name
 
-4. ssdt_hdmi-amd_fb_inj-PEG0
+6. ssdt_hdmi-amd_fb_inj-PEG0
 Supports IOReg/PEG0 display device name
+
+7. ssdt_hdmi-amd_fb-PEGP@1
+Supports IOReg/pci-bridge@1 display device name
+
+8. ssdt_hdmi-amd_fb-PEGP@3 (Edit ssdt/Find 0x00010000/Replace 0x00030000)
+Supports IOReg/pci-bridge@3 display device name
 
 D AMD discrete graphics/framebuffer injection/Examples (AMD HDMI Audio)
 1. ssdt_hdmi-hd6670-Muskgrass-P0P1
