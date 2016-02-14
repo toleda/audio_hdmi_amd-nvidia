@@ -3,12 +3,13 @@ audio_hdmi_discrete
 OS X AMD/Nvidia discrete graphics HDMI audio
 
 PEG0/P0P2/NPE3/P0P1, etc. ???
-1. [Guide]-OSX-hdmi_audio-hdef_audio-ssdt_v3, https://github.com/toleda/audio_hdmi_guides
+1. [Guide]-OSX-hdmi_audio-hdef_audio-ssd, https://github.com/toleda/audio_hdmi_guides
 
 SSDTs
 A. Nvidia discrete graphics (Nvidia HDMI Audio)
-1. ssdt_hdmi-nvidia-BR3A - TBA
+1. ssdt_hdmi-nvidia-BR3A
 Supports IOReg/BR3A display device name
+Note: ssdt edits may be required
 
 2. ssdt_hdmi-nvidia-NPE3
 Supports IOReg/NPE3 display device name
@@ -33,8 +34,9 @@ Supports IOReg/pci-bridge@3 display device name
 
 B. AMD discrete graphics/default framebuffer (AMD HDMI Audio)
 0. ATY,AMD,RadeonFramebuffer
-1. ssdt_hdmi-amd-default-BR3A - TBA
+1. ssdt_hdmi-amd-default-BR3A
 Supports IOReg/BR3A display device name
+Note: ssdt edits may be required
 
 2. ssdt_hdmi-amd-default-NPE3
 Supports IOReg/NPE3 display device name
@@ -59,7 +61,7 @@ Supports IOReg/pci-bridge@3 display device name
 
 C. AMD discrete graphics/framebuffer injection (AMD HDMI Audio)
 Edits required: Model/device-id/framebuffer/number of connectors
-1. ssdt_hdmi-amd-default-BR3A - TBA
+1. ssdt_hdmi-amd-default-BR3A
 Supports IOReg/BR3A display device name
 
 2. ssdt_hdmi-amd_fb_inj-NPE3
@@ -114,12 +116,10 @@ AMD HDMI Audio
 
 Installation (included in download)
 1. [Guide]-OSX_ssdt-installation
+2. [Guide] OS X hdmi audio/x99 ssdt (X99 only)
 
 Problem Reporting
-1. [Guide]-OSX-hdmi_audio-hdef_audio-ssdt_v3, https://github.com/toleda/audio_hdmi_guides
-2. Post to:
-   1. http://www.insanelymac.com/forum/topic/301137-yosemite-applehda-hdmi-audio/
-   2. http://www.tonymacx86.com/hdmi-audio/143760-audio-hdmi-audio-applehda-guide.html#post886766
+1. https://github.com/toleda/audio_hdmi_guides/blob/master/Problem%20Reporting.md
 
 toleda
 https://github.com/toleda/audio_hdmi_discrete
