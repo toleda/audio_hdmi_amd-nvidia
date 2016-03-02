@@ -26,10 +26,13 @@ Supports IOReg/P0P2 display device name
 6. ssdt_hdmi-nvidia-PEG0
 Supports IOReg/PEG0 display device name
 
-7. ssdt_hdmi-nvidia-PEGP@1
+7. ssdt_hdmi-nvidia-PEG1
+Supports IOReg/PEG1 display device name
+
+8. ssdt_hdmi-nvidia-PEGP@1
 Supports IOReg/pci-bridge@1 display device name
 
-8. ssdt_hdmi-nvidia-PEGP@3
+9. ssdt_hdmi-nvidia-PEGP@3
 Supports IOReg/pci-bridge@3 display device name
 
 B. AMD discrete graphics/default framebuffer (AMD HDMI Audio)
@@ -53,10 +56,13 @@ Supports IOReg/P0P2 display device name
 6. ssdt_hdmi-amd-default-PEG0
 Supports IOReg/PEG0 display device name
 
-7. ssdt_hdmi-amd-default-PEGP@1
+7. ssdt_hdmi-amd-default-PEG1
+Supports IOReg/PEG1 display device name
+
+8. ssdt_hdmi-amd-default-PEGP@1
 Supports IOReg/pci-bridge@1 display device name
 
-8. ssdt_hdmi-amd-default-PEGP@3
+9. ssdt_hdmi-amd-default-PEGP@3
 Supports IOReg/pci-bridge@3 display device name
 
 C. AMD discrete graphics/framebuffer injection (AMD HDMI Audio)
@@ -79,10 +85,13 @@ Supports IOReg/P0P2 display device name
 6. ssdt_hdmi-amd_fb_inj-PEG0
 Supports IOReg/PEG0 display device name
 
-7. ssdt_hdmi-amd_fb-PEGP@1
+7. ssdt_hdmi-amd_fb_inj-PEG1 (Edit ssdt/Find P0P1/Replace PEG1)
+Supports IOReg/PEG1 display device name
+
+8. ssdt_hdmi-amd_fb-PEGP@1
 Supports IOReg/pci-bridge@1 display device name
 
-8. ssdt_hdmi-amd_fb-PEGP@3 (Edit ssdt/Find 0x00010000/Replace 0x00030000)
+9. ssdt_hdmi-amd_fb-PEGP@3 (Edit ssdt/Find 0x00010000/Replace 0x00030000)
 Supports IOReg/pci-bridge@3 display device name
 
 D AMD discrete graphics/framebuffer injection/Examples (AMD HDMI Audio)
